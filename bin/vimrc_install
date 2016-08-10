@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp ~/git/vimrc/bin/vimrc_install ~/bin/
+chmod +x ~/bin/vimrc_install
+cp ~/git/vimrc/.vimrc ~/.vimrc
