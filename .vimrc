@@ -10,8 +10,12 @@ let g:mapleader = ","
 
 noremap ,, ,
 
+set visualbell
+set cursorline
+set hidden
 set timeout
 set timeoutlen=2000
+set ttyfast
 
 "font and formatting
 set ruler
@@ -28,6 +32,7 @@ set relativenumber
 "vim-plug plugin installation
 call plug#begin()
 
+"UI
 Plug 'vim-scripts/wombat256.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
