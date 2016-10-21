@@ -16,6 +16,12 @@ set hidden
 set timeout
 set timeoutlen=2000
 set ttyfast
+set ttyscroll=3
+set lazyredraw
+set shiftround
+set wildmenu
+set wildmode=longest:full,full
+set shell=\bin\bash
 
 "font and formatting
 set ruler
@@ -23,11 +29,13 @@ set expandtab
 set smarttab
 set shiftwidth=2
 set tabstop=2
+set autoindent
 
 "line numbers
 set number
 set numberwidth=2
 set relativenumber
+set laststatus=2
 
 "vim-plug plugin installation
 call plug#begin()
@@ -44,7 +52,6 @@ call plug#end()
 colorscheme wombat256mod
 
 "airline
-set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 
 "NERDTree
