@@ -4,12 +4,14 @@
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"mapleader
+"{{{ Basic Configuration
+
 let mapleader = ","
 let g:mapleader = ","
 
 noremap ,, ,
 
+set foldmethod=marker
 set visualbell
 set cursorline
 set hidden
@@ -21,26 +23,25 @@ set lazyredraw
 set shiftround
 set wildmenu
 set wildmode=longest:full,full
+set wildignore+=*.so,*.swp,*.o
 set shell=\bin\bash
-
-"font and formatting
 set ruler
 set expandtab
 set smarttab
 set shiftwidth=2
 set tabstop=2
 set autoindent
-
-"line numbers
 set number
 set numberwidth=2
 set relativenumber
 set laststatus=2
 
-"vim-plug plugin installation
+"}}}
+
+"{{{ Plugins
+
 call plug#begin()
 
-"UI
 Plug 'vim-scripts/wombat256.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
@@ -48,13 +49,19 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
-"colorscheme
+"}}}
+
+"{{{ UI
+
 colorscheme wombat256mod
 
-"airline
 let g:airline#extensions#tabline#enabled = 1
 
-"NERDTree
+"}}}
+
+"{{{ Files
+
+"{{{ NERDTree
 
 let NERDTreeQuitOnOpen = 1
 
@@ -73,10 +80,14 @@ endfunction
 nmap <silent> <leader>f <ESC>:call ToggleFindNerd()<CR>
 nmap <silent> <leader>F <ESC>:NERDTreeToggle<CR>
 
-"CtrlP
+"}}}
+
+"{{{ CtrlP
 
 nnoremap <silent> <Leader><space> :CtrlP<CR>
 let g:ctrlp_max_files=0
 let g:ctrlp_show_hidden=1
 
-set wildignore+=*.so,*.swp,*.o
+"}}}
+
+"}}}
